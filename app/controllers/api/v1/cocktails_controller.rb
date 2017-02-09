@@ -1,3 +1,5 @@
+require 'pry'
+
 module Api
   module V1
     class CocktailsController < ApplicationController
@@ -10,9 +12,10 @@ module Api
       end
 
       def create
-
-      end
-
+        binding.pry
+        render json: Cocktail.create()
+      end 
+      
       def edit
 
       end
